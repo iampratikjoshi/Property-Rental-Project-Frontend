@@ -72,7 +72,7 @@ const RentOverview = ({ tenants }) => {
             <table className="w-full">
               <thead>
                 <tr className="border-b">
-                  <th className="p-2 text-left">Tenant</th>
+                  <th className="p-2 text-left">Company</th>
                   <th className="p-2 text-left">Property</th>
                   <th className="p-2 text-left">Due Date</th>
                   <th className="p-2 text-left">Amount</th>
@@ -82,7 +82,7 @@ const RentOverview = ({ tenants }) => {
               <tbody>
                 {tenants.slice(0, 5).map((tenant, index) => (
                   <tr key={index} className="border-b">
-                    <td className="p-2">{tenant.tenant_name}</td>
+                    <td className="p-2">{tenant.company_name}</td>
                     <td className="p-2">{tenant.property_landlord}</td>
                     <td className="p-2">{new Date().toLocaleDateString()}</td>
                     <td className="p-2">₹{parseFloat(tenant.rent).toLocaleString('en-IN')}</td>
